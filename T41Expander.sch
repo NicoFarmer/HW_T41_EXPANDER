@@ -1,0 +1,2722 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "T41Expander"
+Date ""
+Rev ""
+Comp ""
+Comment1 "NicoFarmer"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CRLG-CPU:Teensy4.1_no_internal_pins U3
+U 1 1 617D9EA7
+P 3625 5850
+F 0 "U3" H 3625 8415 50  0000 C CNN
+F 1 "Teensy4.1" H 3625 8324 50  0000 C CNN
+F 2 "Teensy:Teensy41_no_internal_pins" H 3225 6250 50  0001 C CNN
+F 3 "" H 3225 6250 50  0001 C CNN
+	1    3625 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 617E2AE7
+P 2475 3700
+F 0 "#PWR07" H 2475 3450 50  0001 C CNN
+F 1 "GND" V 2480 3572 50  0000 R CNN
+F 2 "" H 2475 3700 50  0001 C CNN
+F 3 "" H 2475 3700 50  0001 C CNN
+	1    2475 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 617E412A
+P 4775 3800
+F 0 "#PWR020" H 4775 3550 50  0001 C CNN
+F 1 "GND" V 4780 3672 50  0000 R CNN
+F 2 "" H 4775 3800 50  0001 C CNN
+F 3 "" H 4775 3800 50  0001 C CNN
+	1    4775 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2475 3700 2525 3700
+Wire Wire Line
+	4725 3800 4775 3800
+Wire Wire Line
+	4725 5100 4775 5100
+$Comp
+L power:+5V #PWR022
+U 1 1 617EA41E
+P 4925 3675
+F 0 "#PWR022" H 4925 3525 50  0001 C CNN
+F 1 "+5V" H 4940 3848 50  0000 C CNN
+F 2 "" H 4925 3675 50  0001 C CNN
+F 3 "" H 4925 3675 50  0001 C CNN
+	1    4925 3675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 3700 4925 3700
+Wire Wire Line
+	4925 3700 4925 3675
+$Comp
+L CRLG-Connectors:Conn_01x04 J22
+U 1 1 617EF66A
+P 9325 3525
+F 0 "J22" H 9243 3842 50  0000 C CNN
+F 1 "Conn_01x04" H 9243 3751 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 9325 3525 50  0001 C CNN
+F 3 "" H 9325 3525 50  0001 C CNN
+	1    9325 3525
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR024
+U 1 1 617F21D9
+P 5175 3850
+F 0 "#PWR024" H 5175 3700 50  0001 C CNN
+F 1 "+3.3V" H 5190 4023 50  0000 C CNN
+F 2 "" H 5175 3850 50  0001 C CNN
+F 3 "" H 5175 3850 50  0001 C CNN
+	1    5175 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3800 2525 3800
+Wire Wire Line
+	2525 3900 1900 3900
+Wire Wire Line
+	2525 4000 1900 4000
+Wire Wire Line
+	2525 4100 1900 4100
+Wire Wire Line
+	2525 4200 1900 4200
+Wire Wire Line
+	2525 4300 1900 4300
+Text Label 2000 3900 0    50   ~ 0
+CODER_1_A
+Text Label 2000 4000 0    50   ~ 0
+CODER_1_B
+Text Label 2000 4100 0    50   ~ 0
+CODER_2_A
+Text Label 2000 4200 0    50   ~ 0
+CODER_2_B
+Text Label 2000 4500 0    50   ~ 0
+CODER_3_A
+Text Label 2000 5800 0    50   ~ 0
+CODER_3_B
+Wire Wire Line
+	2525 5700 1900 5700
+Text Label 4800 4500 0    50   ~ 0
+I2C_SDA
+Text Label 4800 4400 0    50   ~ 0
+I2C_SCL
+Text Label 825  5600 0    50   ~ 0
+RS232_1_RX
+Text Label 1950 5700 0    50   ~ 0
+RS232_1_TX
+$Comp
+L CRLG-Passive:C C6
+U 1 1 61814F53
+P 5750 3900
+F 0 "C6" H 5865 3946 50  0000 L CNN
+F 1 "100n" H 5865 3855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5788 3750 50  0001 C CNN
+F 3 "" H 5750 3900 50  0001 C CNN
+	1    5750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 6181562A
+P 5750 4100
+F 0 "#PWR029" H 5750 3850 50  0001 C CNN
+F 1 "GND" V 5755 3972 50  0000 R CNN
+F 2 "" H 5750 4100 50  0001 C CNN
+F 3 "" H 5750 4100 50  0001 C CNN
+	1    5750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR028
+U 1 1 61815A79
+P 5750 3700
+F 0 "#PWR028" H 5750 3550 50  0001 C CNN
+F 1 "+5V" H 5765 3873 50  0000 C CNN
+F 2 "" H 5750 3700 50  0001 C CNN
+F 3 "" H 5750 3700 50  0001 C CNN
+	1    5750 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3700 5750 3725
+Wire Wire Line
+	5750 4050 5750 4075
+Wire Wire Line
+	4725 6000 5400 6000
+Wire Wire Line
+	4725 5900 5400 5900
+Wire Wire Line
+	4725 5700 5400 5700
+Wire Wire Line
+	4725 5800 5400 5800
+Wire Wire Line
+	4725 5600 5400 5600
+Wire Wire Line
+	4725 5500 5400 5500
+Text Label 4750 5700 0    50   ~ 0
+Mot1_PWM
+Text Label 4750 5900 0    50   ~ 0
+Mot1_Sens1
+Text Label 4750 5800 0    50   ~ 0
+Mot1_Sens2
+Text Label 4750 5600 0    50   ~ 0
+Mot2_PWM
+Text Label 4750 5400 0    50   ~ 0
+Mot2_Sens1
+Text Label 4750 5500 0    50   ~ 0
+Mot2_Sens2
+Wire Wire Line
+	2525 4400 1900 4400
+Wire Wire Line
+	2525 4500 1900 4500
+Wire Wire Line
+	2525 4600 1900 4600
+Wire Wire Line
+	2525 4700 1900 4700
+Wire Wire Line
+	4725 4600 5375 4600
+Text Label 4825 4600 0    50   ~ 0
+RS232_2_TX
+Text Label 5850 4700 0    50   ~ 0
+RS232_2_RX
+$Comp
+L CRLG-Passive:R R5
+U 1 1 61844390
+P 3750 875
+F 0 "R5" H 3820 921 50  0000 L CNN
+F 1 "4.7k" H 3820 830 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3680 875 50  0001 C CNN
+F 3 "" H 3750 875 50  0001 C CNN
+	1    3750 875 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R6
+U 1 1 618477CE
+P 4050 875
+F 0 "R6" H 4120 921 50  0000 L CNN
+F 1 "4.7k" H 4120 830 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3980 875 50  0001 C CNN
+F 3 "" H 4050 875 50  0001 C CNN
+	1    4050 875 
+	1    0    0    -1  
+$EndComp
+Text Label 9525 3525 0    50   ~ 0
+GND
+$Comp
+L power:GND #PWR021
+U 1 1 617E3887
+P 4775 5100
+F 0 "#PWR021" H 4775 4850 50  0001 C CNN
+F 1 "GND" V 4780 4972 50  0000 R CNN
+F 2 "" H 4775 5100 50  0001 C CNN
+F 3 "" H 4775 5100 50  0001 C CNN
+	1    4775 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 4075 6150 4075
+Connection ~ 5750 4075
+Wire Wire Line
+	5750 4075 5750 4100
+Text Label 5900 4075 0    50   ~ 0
+GND
+Wire Wire Line
+	5750 3725 6150 3725
+Connection ~ 5750 3725
+Wire Wire Line
+	5750 3725 5750 3750
+Text Label 5900 3725 0    50   ~ 0
++5V
+Text Label 4925 3900 0    50   ~ 0
++3.3V
+Text Label 9525 3425 0    50   ~ 0
++5V
+$Comp
+L power:+3.3V #PWR015
+U 1 1 6184875A
+P 3900 725
+F 0 "#PWR015" H 3900 575 50  0001 C CNN
+F 1 "+3.3V" H 3915 898 50  0000 C CNN
+F 2 "" H 3900 725 50  0001 C CNN
+F 3 "" H 3900 725 50  0001 C CNN
+	1    3900 725 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 725  3900 725 
+Wire Wire Line
+	3900 725  4050 725 
+Connection ~ 3900 725 
+Wire Wire Line
+	4050 1025 4050 1100
+Wire Wire Line
+	3750 1025 3750 1200
+$Comp
+L power:+3.3V #PWR045
+U 1 1 6187B839
+P 10150 3275
+F 0 "#PWR045" H 10150 3125 50  0001 C CNN
+F 1 "+3.3V" H 10165 3448 50  0000 C CNN
+F 2 "" H 10150 3275 50  0001 C CNN
+F 3 "" H 10150 3275 50  0001 C CNN
+	1    10150 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R22
+U 1 1 6187D54C
+P 10000 3475
+F 0 "R22" H 10070 3521 50  0000 L CNN
+F 1 "10k" H 10070 3430 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9930 3475 50  0001 C CNN
+F 3 "" H 10000 3475 50  0001 C CNN
+	1    10000 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R28
+U 1 1 61880417
+P 10300 3475
+F 0 "R28" H 10370 3521 50  0000 L CNN
+F 1 "10k" H 10370 3430 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10230 3475 50  0001 C CNN
+F 3 "" H 10300 3475 50  0001 C CNN
+	1    10300 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 3725 10300 3625
+Wire Wire Line
+	9525 3525 9700 3525
+Wire Wire Line
+	9525 3425 9700 3425
+Wire Wire Line
+	9525 3725 10300 3725
+Wire Wire Line
+	10000 3325 10150 3325
+Wire Wire Line
+	10150 3325 10150 3275
+Wire Wire Line
+	10150 3325 10300 3325
+Connection ~ 10150 3325
+Text Label 9525 3625 0    50   ~ 0
+CODER_1_B
+Wire Wire Line
+	9525 3625 10000 3625
+Text Label 9525 3725 0    50   ~ 0
+CODER_1_A
+$Comp
+L CRLG-Connectors:Conn_01x04 J23
+U 1 1 618B4AFE
+P 9325 4250
+F 0 "J23" H 9243 4567 50  0000 C CNN
+F 1 "Conn_01x04" H 9243 4476 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 9325 4250 50  0001 C CNN
+F 3 "" H 9325 4250 50  0001 C CNN
+	1    9325 4250
+	-1   0    0    -1  
+$EndComp
+Text Label 9525 4250 0    50   ~ 0
+GND
+Text Label 9525 4150 0    50   ~ 0
++5V
+$Comp
+L power:+3.3V #PWR046
+U 1 1 618B4B0A
+P 10150 4000
+F 0 "#PWR046" H 10150 3850 50  0001 C CNN
+F 1 "+3.3V" H 10165 4173 50  0000 C CNN
+F 2 "" H 10150 4000 50  0001 C CNN
+F 3 "" H 10150 4000 50  0001 C CNN
+	1    10150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R23
+U 1 1 618B4B14
+P 10000 4200
+F 0 "R23" H 10070 4246 50  0000 L CNN
+F 1 "10k" H 10070 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9930 4200 50  0001 C CNN
+F 3 "" H 10000 4200 50  0001 C CNN
+	1    10000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R29
+U 1 1 618B4B1E
+P 10300 4200
+F 0 "R29" H 10370 4246 50  0000 L CNN
+F 1 "10k" H 10370 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10230 4200 50  0001 C CNN
+F 3 "" H 10300 4200 50  0001 C CNN
+	1    10300 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 4450 10300 4350
+Wire Wire Line
+	9525 4250 9700 4250
+Wire Wire Line
+	9525 4150 9700 4150
+Wire Wire Line
+	9525 4450 10300 4450
+Wire Wire Line
+	10000 4050 10150 4050
+Wire Wire Line
+	10150 4050 10150 4000
+Wire Wire Line
+	10150 4050 10300 4050
+Connection ~ 10150 4050
+Text Label 9525 4350 0    50   ~ 0
+CODER_2_B
+Wire Wire Line
+	9525 4350 10000 4350
+Text Label 9525 4450 0    50   ~ 0
+CODER_2_A
+$Comp
+L CRLG-Connectors:Conn_01x04 J24
+U 1 1 618BE268
+P 9325 4975
+F 0 "J24" H 9243 5292 50  0000 C CNN
+F 1 "Conn_01x04" H 9243 5201 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 9325 4975 50  0001 C CNN
+F 3 "" H 9325 4975 50  0001 C CNN
+	1    9325 4975
+	-1   0    0    -1  
+$EndComp
+Text Label 9525 4975 0    50   ~ 0
+GND
+Text Label 9525 4875 0    50   ~ 0
++5V
+$Comp
+L power:+3.3V #PWR047
+U 1 1 618BE274
+P 10150 4725
+F 0 "#PWR047" H 10150 4575 50  0001 C CNN
+F 1 "+3.3V" H 10165 4898 50  0000 C CNN
+F 2 "" H 10150 4725 50  0001 C CNN
+F 3 "" H 10150 4725 50  0001 C CNN
+	1    10150 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R24
+U 1 1 618BE27E
+P 10000 4925
+F 0 "R24" H 10070 4971 50  0000 L CNN
+F 1 "10k" H 10070 4880 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9930 4925 50  0001 C CNN
+F 3 "" H 10000 4925 50  0001 C CNN
+	1    10000 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R30
+U 1 1 618BE288
+P 10300 4925
+F 0 "R30" H 10370 4971 50  0000 L CNN
+F 1 "10k" H 10370 4880 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10230 4925 50  0001 C CNN
+F 3 "" H 10300 4925 50  0001 C CNN
+	1    10300 4925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 5175 10300 5075
+Wire Wire Line
+	9525 4975 9700 4975
+Wire Wire Line
+	9525 4875 9700 4875
+Wire Wire Line
+	9525 5175 10300 5175
+Wire Wire Line
+	10000 4775 10150 4775
+Wire Wire Line
+	10150 4775 10150 4725
+Wire Wire Line
+	10150 4775 10300 4775
+Connection ~ 10150 4775
+Text Label 9525 5075 0    50   ~ 0
+CODER_3_B
+Wire Wire Line
+	9525 5075 10000 5075
+Text Label 9525 5175 0    50   ~ 0
+CODER_3_A
+$Comp
+L CRLG-Passive:C C13
+U 1 1 618D78C4
+P 10800 4100
+F 0 "C13" H 10915 4146 50  0000 L CNN
+F 1 "47u" H 10915 4055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 10838 3950 50  0001 C CNN
+F 3 "" H 10800 4100 50  0001 C CNN
+	1    10800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR050
+U 1 1 618D9402
+P 10800 4300
+F 0 "#PWR050" H 10800 4050 50  0001 C CNN
+F 1 "GND" V 10805 4172 50  0000 R CNN
+F 2 "" H 10800 4300 50  0001 C CNN
+F 3 "" H 10800 4300 50  0001 C CNN
+	1    10800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 3900 10800 3950
+Wire Wire Line
+	10800 4250 10800 4300
+$Comp
+L power:+5V #PWR049
+U 1 1 618FDBFD
+P 10800 3900
+F 0 "#PWR049" H 10800 3750 50  0001 C CNN
+F 1 "+5V" H 10815 4073 50  0000 C CNN
+F 2 "" H 10800 3900 50  0001 C CNN
+F 3 "" H 10800 3900 50  0001 C CNN
+	1    10800 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 6191DD42
+P 1625 6000
+F 0 "#PWR04" H 1625 5750 50  0001 C CNN
+F 1 "GND" V 1630 5872 50  0000 R CNN
+F 2 "" H 1625 6000 50  0001 C CNN
+F 3 "" H 1625 6000 50  0001 C CNN
+	1    1625 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R2
+U 1 1 6191E691
+P 1625 5800
+F 0 "R2" H 1695 5846 50  0000 L CNN
+F 1 "18k" H 1695 5755 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1555 5800 50  0001 C CNN
+F 3 "" H 1625 5800 50  0001 C CNN
+	1    1625 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:R R1
+U 1 1 6191C3D7
+P 1475 5600
+F 0 "R1" V 1275 5550 50  0000 L CNN
+F 1 "10k" V 1375 5525 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1405 5600 50  0001 C CNN
+F 3 "" H 1475 5600 50  0001 C CNN
+	1    1475 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1625 5600 1625 5650
+Wire Wire Line
+	1625 5950 1625 6000
+Wire Wire Line
+	1325 5600 800  5600
+Wire Wire Line
+	1625 5600 2525 5600
+Connection ~ 1625 5600
+Text Notes 925  5825 0    50   ~ 0
+5V -> 3.3V
+$Comp
+L CRLG-Passive:R R9
+U 1 1 61941B70
+P 5650 4700
+F 0 "R9" V 5475 4625 50  0000 L CNN
+F 1 "10k" V 5550 4625 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5580 4700 50  0001 C CNN
+F 3 "" H 5650 4700 50  0001 C CNN
+	1    5650 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L CRLG-Passive:R R8
+U 1 1 619430DF
+P 5425 4900
+F 0 "R8" H 5495 4946 50  0000 L CNN
+F 1 "18k" H 5495 4855 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5355 4900 50  0001 C CNN
+F 3 "" H 5425 4900 50  0001 C CNN
+	1    5425 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 619437E9
+P 5425 5100
+F 0 "#PWR027" H 5425 4850 50  0001 C CNN
+F 1 "GND" H 5500 4975 50  0000 R CNN
+F 2 "" H 5425 5100 50  0001 C CNN
+F 3 "" H 5425 5100 50  0001 C CNN
+	1    5425 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 4700 5425 4700
+Wire Wire Line
+	5425 4750 5425 4700
+Connection ~ 5425 4700
+Wire Wire Line
+	5425 4700 5500 4700
+Wire Wire Line
+	5800 4700 6350 4700
+Text Notes 5600 4850 0    50   ~ 0
+5V -> 3.3V
+Wire Wire Line
+	5425 5050 5425 5100
+Wire Wire Line
+	4725 4000 5350 4000
+Text Label 4825 4000 0    50   ~ 0
+Eana1f
+Wire Wire Line
+	4725 4100 5350 4100
+Wire Wire Line
+	4725 4200 5350 4200
+Wire Wire Line
+	4725 4300 5350 4300
+Text Label 4825 4100 0    50   ~ 0
+Eana2f
+Text Label 4825 4200 0    50   ~ 0
+Eana3f
+Text Label 4825 4300 0    50   ~ 0
+Eana4f
+Wire Wire Line
+	4725 4400 5350 4400
+Text Label 2000 5200 0    50   ~ 0
+Eana_Vbat
+Wire Wire Line
+	4725 5200 5100 5200
+Wire Wire Line
+	4725 5300 5100 5300
+$Comp
+L CRLG-Passive:R R11
+U 1 1 619AEE22
+P 5850 7000
+F 0 "R11" V 5675 6925 50  0000 L CNN
+F 1 "470" V 5750 6925 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5780 7000 50  0001 C CNN
+F 3 "" H 5850 7000 50  0001 C CNN
+	1    5850 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:LED D3
+U 1 1 619C7C82
+P 5850 7300
+F 0 "D3" H 5927 7292 45  0000 L CNN
+F 1 "LED" H 5927 7208 45  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 5650 7300 20  0001 C CNN
+F 3 "" H 5850 7300 50  0001 C CNN
+	1    5850 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 619C935A
+P 5850 7550
+F 0 "#PWR030" H 5850 7300 50  0001 C CNN
+F 1 "GND" H 5925 7425 50  0000 R CNN
+F 2 "" H 5850 7550 50  0001 C CNN
+F 3 "" H 5850 7550 50  0001 C CNN
+	1    5850 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 7150 5850 7200
+Wire Wire Line
+	5850 7500 5850 7550
+Text Label 5850 6850 1    50   ~ 0
+LED1
+Wire Wire Line
+	5850 6850 5850 6650
+$Comp
+L CRLG-Passive:R R12
+U 1 1 619E6893
+P 6250 7000
+F 0 "R12" V 6075 6925 50  0000 L CNN
+F 1 "470" V 6150 6925 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6180 7000 50  0001 C CNN
+F 3 "" H 6250 7000 50  0001 C CNN
+	1    6250 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:LED D5
+U 1 1 619E6899
+P 6250 7300
+F 0 "D5" H 6327 7292 45  0000 L CNN
+F 1 "LED" H 6327 7208 45  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 6050 7300 20  0001 C CNN
+F 3 "" H 6250 7300 50  0001 C CNN
+	1    6250 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 619E689F
+P 6250 7550
+F 0 "#PWR033" H 6250 7300 50  0001 C CNN
+F 1 "GND" H 6325 7425 50  0000 R CNN
+F 2 "" H 6250 7550 50  0001 C CNN
+F 3 "" H 6250 7550 50  0001 C CNN
+	1    6250 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 7150 6250 7200
+Wire Wire Line
+	6250 7500 6250 7550
+Text Label 6250 6850 1    50   ~ 0
+LED2
+Wire Wire Line
+	6250 6850 6250 6650
+$Comp
+L CRLG-Passive:R R13
+U 1 1 619EC71D
+P 6650 7000
+F 0 "R13" V 6475 6925 50  0000 L CNN
+F 1 "470" V 6550 6925 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6580 7000 50  0001 C CNN
+F 3 "" H 6650 7000 50  0001 C CNN
+	1    6650 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:LED D6
+U 1 1 619EC723
+P 6650 7300
+F 0 "D6" H 6727 7292 45  0000 L CNN
+F 1 "LED" H 6727 7208 45  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 6450 7300 20  0001 C CNN
+F 3 "" H 6650 7300 50  0001 C CNN
+	1    6650 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR037
+U 1 1 619EC729
+P 6650 7550
+F 0 "#PWR037" H 6650 7300 50  0001 C CNN
+F 1 "GND" H 6725 7425 50  0000 R CNN
+F 2 "" H 6650 7550 50  0001 C CNN
+F 3 "" H 6650 7550 50  0001 C CNN
+	1    6650 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 7150 6650 7200
+Wire Wire Line
+	6650 7500 6650 7550
+Text Label 6650 6850 1    50   ~ 0
+LED3
+Wire Wire Line
+	6650 6850 6650 6650
+Wire Notes Line
+	5650 6575 5650 7750
+Wire Notes Line
+	5650 7750 6900 7750
+Wire Notes Line
+	6900 7750 6900 6575
+Wire Notes Line
+	6900 6575 5650 6575
+Text Notes 5675 6550 0    50   ~ 0
+LED debug
+Text Notes 9075 3025 0    50   ~ 0
+Codeurs de position
+Wire Wire Line
+	5175 3850 5175 3900
+Wire Wire Line
+	5175 3900 4725 3900
+$Comp
+L CRLG-Passive:C C7
+U 1 1 61879C43
+P 6425 3900
+F 0 "C7" H 6540 3946 50  0000 L CNN
+F 1 "100n" H 6540 3855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6463 3750 50  0001 C CNN
+F 3 "" H 6425 3900 50  0001 C CNN
+	1    6425 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 61879C4D
+P 6425 4100
+F 0 "#PWR036" H 6425 3850 50  0001 C CNN
+F 1 "GND" V 6430 3972 50  0000 R CNN
+F 2 "" H 6425 4100 50  0001 C CNN
+F 3 "" H 6425 4100 50  0001 C CNN
+	1    6425 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6425 3700 6425 3725
+Wire Wire Line
+	6425 4050 6425 4075
+Wire Wire Line
+	6425 4075 6825 4075
+Connection ~ 6425 4075
+Wire Wire Line
+	6425 4075 6425 4100
+Text Label 6575 4075 0    50   ~ 0
+GND
+Wire Wire Line
+	6425 3725 6825 3725
+Connection ~ 6425 3725
+Wire Wire Line
+	6425 3725 6425 3750
+Text Label 6575 3725 0    50   ~ 0
++3.3V
+$Comp
+L power:+3.3V #PWR035
+U 1 1 6188097C
+P 6425 3700
+F 0 "#PWR035" H 6425 3550 50  0001 C CNN
+F 1 "+3.3V" H 6440 3873 50  0000 C CNN
+F 2 "" H 6425 3700 50  0001 C CNN
+F 3 "" H 6425 3700 50  0001 C CNN
+	1    6425 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x04 J25
+U 1 1 61E94AA2
+P 9325 5725
+F 0 "J25" H 9243 6042 50  0000 C CNN
+F 1 "Conn_01x04" H 9243 5951 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 9325 5725 50  0001 C CNN
+F 3 "" H 9325 5725 50  0001 C CNN
+	1    9325 5725
+	-1   0    0    -1  
+$EndComp
+Text Label 9525 5725 0    50   ~ 0
+GND
+Text Label 9525 5625 0    50   ~ 0
++5V
+$Comp
+L power:+3.3V #PWR048
+U 1 1 61E94AAE
+P 10150 5475
+F 0 "#PWR048" H 10150 5325 50  0001 C CNN
+F 1 "+3.3V" H 10165 5648 50  0000 C CNN
+F 2 "" H 10150 5475 50  0001 C CNN
+F 3 "" H 10150 5475 50  0001 C CNN
+	1    10150 5475
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R25
+U 1 1 61E94AB8
+P 10000 5675
+F 0 "R25" H 10070 5721 50  0000 L CNN
+F 1 "10k" H 10070 5630 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9930 5675 50  0001 C CNN
+F 3 "" H 10000 5675 50  0001 C CNN
+	1    10000 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:R R31
+U 1 1 61E94AC2
+P 10300 5675
+F 0 "R31" H 10370 5721 50  0000 L CNN
+F 1 "10k" H 10370 5630 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10230 5675 50  0001 C CNN
+F 3 "" H 10300 5675 50  0001 C CNN
+	1    10300 5675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 5925 10300 5825
+Wire Wire Line
+	9525 5725 9700 5725
+Wire Wire Line
+	9525 5625 9700 5625
+Wire Wire Line
+	9525 5925 10300 5925
+Wire Wire Line
+	10000 5525 10150 5525
+Wire Wire Line
+	10150 5525 10150 5475
+Wire Wire Line
+	10150 5525 10300 5525
+Connection ~ 10150 5525
+Text Label 9525 5825 0    50   ~ 0
+CODER_4_B
+Wire Wire Line
+	9525 5825 10000 5825
+Text Label 9525 5925 0    50   ~ 0
+CODER_4_A
+Wire Notes Line
+	11125 6075 9075 6075
+Wire Notes Line
+	9075 6075 9075 3050
+Wire Notes Line
+	9075 3050 11100 3050
+Wire Notes Line
+	11100 3050 11100 6075
+Wire Wire Line
+	2525 5900 1900 5900
+Wire Wire Line
+	2525 6000 1900 6000
+Text Label 2000 5900 0    50   ~ 0
+CODER_4_A
+Text Label 4775 6000 0    50   ~ 0
+CODER_4_B
+Wire Wire Line
+	2525 5000 1900 5000
+Wire Wire Line
+	2525 4900 1900 4900
+Wire Wire Line
+	2525 4800 1900 4800
+Text Label 2000 4800 0    50   ~ 0
+Mot3_Sens2
+Text Label 2000 4900 0    50   ~ 0
+Mot3_Sens1
+Text Label 2000 5000 0    50   ~ 0
+Mot3_PWM
+Text Label 2075 4300 0    50   ~ 0
+SPWM1
+Text Label 2075 4400 0    50   ~ 0
+SPWM2
+Text Label 2050 4600 0    50   ~ 0
+SPWM3
+Text Label 2100 4700 0    50   ~ 0
+Efreqf
+Wire Wire Line
+	4725 4800 5125 4800
+Wire Wire Line
+	4725 4900 5125 4900
+Text Label 4775 5200 0    50   ~ 0
+LED1
+Text Label 4775 5300 0    50   ~ 0
+LED2
+Text Label 2000 5300 0    50   ~ 0
+GPIO1
+Text Label 4775 4800 0    50   ~ 0
+GPIO2
+Text Label 4775 4900 0    50   ~ 0
+GPIO3
+Wire Wire Line
+	2525 5800 1900 5800
+Text Label 1950 6000 0    50   ~ 0
+RS232_1_GPIO
+$Comp
+L CRLG_Regulators:TSR_2-2450 U2
+U 1 1 61F0F4FC
+P 1700 950
+F 0 "U2" H 1700 1317 50  0000 C CNN
+F 1 "TSR_2-2450" H 1700 1226 50  0000 C CNN
+F 2 "Convert_DCDC:Converter_DCDC_TRACO_TSR-2_THT" H 1700 800 50  0001 L CIN
+F 3 "" H 1700 950 50  0001 C CNN
+	1    1700 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 61F0F502
+P 1700 1200
+F 0 "#PWR05" H 1700 950 50  0001 C CNN
+F 1 "GND" H 1700 1050 50  0000 C CNN
+F 2 "" H 1700 1200 50  0000 C CNN
+F 3 "" H 1700 1200 50  0000 C CNN
+	1    1700 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1150 1700 1200
+$Comp
+L CRLG-Connectors:Conn_XT30 J1
+U 1 1 61F0F509
+P 700 950
+F 0 "J1" H 618 633 50  0000 C CNN
+F 1 "Conn_XT30" H 618 724 50  0000 C CNN
+F 2 "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical" H 700 950 50  0001 C CNN
+F 3 "" H 700 950 50  0001 C CNN
+	1    700  950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 61F0F50F
+P 900 1000
+F 0 "#PWR01" H 900 750 50  0001 C CNN
+F 1 "GND" H 900 850 50  0000 C CNN
+F 2 "" H 900 1000 50  0000 C CNN
+F 3 "" H 900 1000 50  0000 C CNN
+	1    900  1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  950  900  1000
+$Comp
+L power:+5V #PWR06
+U 1 1 61F0F516
+P 2100 725
+F 0 "#PWR06" H 2100 575 50  0001 C CNN
+F 1 "+5V" H 2100 865 50  0000 C CNN
+F 2 "" H 2100 725 50  0000 C CNN
+F 3 "" H 2100 725 50  0000 C CNN
+	1    2100 725 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 725  2100 850 
+Text Label 925  850  0    50   ~ 0
+VBAT
+Wire Wire Line
+	2100 850  2175 850 
+Connection ~ 2100 850 
+$Comp
+L CRLG-Passive:CP C2
+U 1 1 61F0F520
+P 2175 1050
+F 0 "C2" H 2293 1096 50  0000 L CNN
+F 1 "220u" H 2293 1005 50  0000 L CNN
+F 2 "Passive:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 2213 900 50  0001 C CNN
+F 3 "" H 2175 1050 50  0001 C CNN
+	1    2175 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2175 900  2175 850 
+Connection ~ 2175 850 
+Wire Wire Line
+	2175 1200 1700 1200
+Connection ~ 1700 1200
+Wire Wire Line
+	900  850  1150 850 
+$Comp
+L CRLG-Passive:CP C1
+U 1 1 61F0F52B
+P 1150 1050
+F 0 "C1" H 1268 1096 50  0000 L CNN
+F 1 "220u" H 1268 1005 50  0000 L CNN
+F 2 "Passive:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 1188 900 50  0001 C CNN
+F 3 "" H 1150 1050 50  0001 C CNN
+	1    1150 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1200 1700 1200
+Wire Wire Line
+	1150 900  1150 850 
+Connection ~ 1150 850 
+Wire Wire Line
+	1150 850  1300 850 
+Text Notes 1800 1400 0    50   ~ 0
+Condensateur 220µF\nRS: 766-0066
+Wire Wire Line
+	2175 850  2325 850 
+Text Label 2175 850  0    50   ~ 0
++5V
+$Comp
+L power:GND #PWR?
+U 1 1 61F48192
+P 8400 2600
+AR Path="/61F05029/61F48192" Ref="#PWR?"  Part="1" 
+AR Path="/61F48192" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 8400 2350 50  0001 C CNN
+F 1 "GND" H 8400 2450 50  0000 C CNN
+F 2 "" H 8400 2600 50  0000 C CNN
+F 3 "" H 8400 2600 50  0000 C CNN
+	1    8400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:C C?
+U 1 1 61F48198
+P 8150 2400
+AR Path="/61F05029/61F48198" Ref="C?"  Part="1" 
+AR Path="/61F48198" Ref="C9"  Part="1" 
+F 0 "C9" H 8325 2400 50  0000 C CNN
+F 1 "Value" H 8275 2325 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 8188 2250 50  0001 C CNN
+F 3 "" H 8150 2400 50  0001 C CNN
+	1    8150 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F4819E
+P 8400 2050
+AR Path="/61F05029/61F4819E" Ref="R?"  Part="1" 
+AR Path="/61F4819E" Ref="R18"  Part="1" 
+F 0 "R18" H 8470 2096 50  0000 L CNN
+F 1 "R" H 8470 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 8330 2050 50  0001 C CNN
+F 3 "" H 8400 2050 50  0001 C CNN
+	1    8400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2200 8400 2225
+Wire Wire Line
+	8050 1900 8400 1900
+Wire Wire Line
+	8050 2225 8150 2225
+Connection ~ 8400 2225
+Wire Wire Line
+	8400 2225 8400 2250
+Text Label 8050 1900 0    50   ~ 0
+Eana1
+Text Label 8050 2225 0    50   ~ 0
+Eana1f
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F481AB
+P 8400 2400
+AR Path="/61F05029/61F481AB" Ref="R?"  Part="1" 
+AR Path="/61F481AB" Ref="R19"  Part="1" 
+F 0 "R19" H 8470 2446 50  0000 L CNN
+F 1 "R" H 8470 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 8330 2400 50  0001 C CNN
+F 3 "" H 8400 2400 50  0001 C CNN
+	1    8400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2550 8400 2575
+Wire Wire Line
+	8150 2550 8150 2575
+Wire Wire Line
+	8150 2575 8400 2575
+Connection ~ 8400 2575
+Wire Wire Line
+	8400 2575 8400 2600
+Wire Wire Line
+	8150 2250 8150 2225
+Connection ~ 8150 2225
+Wire Wire Line
+	8150 2225 8400 2225
+$Comp
+L power:GND #PWR?
+U 1 1 61F481B9
+P 9125 2600
+AR Path="/61F05029/61F481B9" Ref="#PWR?"  Part="1" 
+AR Path="/61F481B9" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 9125 2350 50  0001 C CNN
+F 1 "GND" H 9125 2450 50  0000 C CNN
+F 2 "" H 9125 2600 50  0000 C CNN
+F 3 "" H 9125 2600 50  0000 C CNN
+	1    9125 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:C C?
+U 1 1 61F481BF
+P 8875 2400
+AR Path="/61F05029/61F481BF" Ref="C?"  Part="1" 
+AR Path="/61F481BF" Ref="C10"  Part="1" 
+F 0 "C10" H 9050 2400 50  0000 C CNN
+F 1 "Value" H 9000 2325 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 8913 2250 50  0001 C CNN
+F 3 "" H 8875 2400 50  0001 C CNN
+	1    8875 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F481C5
+P 9125 2050
+AR Path="/61F05029/61F481C5" Ref="R?"  Part="1" 
+AR Path="/61F481C5" Ref="R20"  Part="1" 
+F 0 "R20" H 9195 2096 50  0000 L CNN
+F 1 "R" H 9195 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9055 2050 50  0001 C CNN
+F 3 "" H 9125 2050 50  0001 C CNN
+	1    9125 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9125 2200 9125 2225
+Wire Wire Line
+	8775 1900 9125 1900
+Wire Wire Line
+	8775 2225 8875 2225
+Connection ~ 9125 2225
+Wire Wire Line
+	9125 2225 9125 2250
+Text Label 8775 1900 0    50   ~ 0
+Eana2
+Text Label 8775 2225 0    50   ~ 0
+Eana2f
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F481D2
+P 9125 2400
+AR Path="/61F05029/61F481D2" Ref="R?"  Part="1" 
+AR Path="/61F481D2" Ref="R21"  Part="1" 
+F 0 "R21" H 9195 2446 50  0000 L CNN
+F 1 "R" H 9195 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9055 2400 50  0001 C CNN
+F 3 "" H 9125 2400 50  0001 C CNN
+	1    9125 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9125 2550 9125 2575
+Wire Wire Line
+	8875 2550 8875 2575
+Wire Wire Line
+	8875 2575 9125 2575
+Connection ~ 9125 2575
+Wire Wire Line
+	9125 2575 9125 2600
+Wire Wire Line
+	8875 2250 8875 2225
+Connection ~ 8875 2225
+Wire Wire Line
+	8875 2225 9125 2225
+$Comp
+L power:GND #PWR?
+U 1 1 61F481E0
+P 10050 2600
+AR Path="/61F05029/61F481E0" Ref="#PWR?"  Part="1" 
+AR Path="/61F481E0" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 10050 2350 50  0001 C CNN
+F 1 "GND" H 10050 2450 50  0000 C CNN
+F 2 "" H 10050 2600 50  0000 C CNN
+F 3 "" H 10050 2600 50  0000 C CNN
+	1    10050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:C C?
+U 1 1 61F481E6
+P 9800 2400
+AR Path="/61F05029/61F481E6" Ref="C?"  Part="1" 
+AR Path="/61F481E6" Ref="C11"  Part="1" 
+F 0 "C11" H 9975 2400 50  0000 C CNN
+F 1 "Value" H 9925 2325 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 9838 2250 50  0001 C CNN
+F 3 "" H 9800 2400 50  0001 C CNN
+	1    9800 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F481EC
+P 10050 2050
+AR Path="/61F05029/61F481EC" Ref="R?"  Part="1" 
+AR Path="/61F481EC" Ref="R26"  Part="1" 
+F 0 "R26" H 10120 2096 50  0000 L CNN
+F 1 "R" H 10120 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9980 2050 50  0001 C CNN
+F 3 "" H 10050 2050 50  0001 C CNN
+	1    10050 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2200 10050 2225
+Wire Wire Line
+	9700 1900 10050 1900
+Wire Wire Line
+	9700 2225 9800 2225
+Connection ~ 10050 2225
+Wire Wire Line
+	10050 2225 10050 2250
+Text Label 9700 1900 0    50   ~ 0
+Eana3
+Text Label 9700 2225 0    50   ~ 0
+Eana3f
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F481F9
+P 10050 2400
+AR Path="/61F05029/61F481F9" Ref="R?"  Part="1" 
+AR Path="/61F481F9" Ref="R27"  Part="1" 
+F 0 "R27" H 10120 2446 50  0000 L CNN
+F 1 "R" H 10120 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9980 2400 50  0001 C CNN
+F 3 "" H 10050 2400 50  0001 C CNN
+	1    10050 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2550 10050 2575
+Wire Wire Line
+	9800 2550 9800 2575
+Wire Wire Line
+	9800 2575 10050 2575
+Connection ~ 10050 2575
+Wire Wire Line
+	10050 2575 10050 2600
+Wire Wire Line
+	9800 2250 9800 2225
+Connection ~ 9800 2225
+Wire Wire Line
+	9800 2225 10050 2225
+$Comp
+L power:GND #PWR?
+U 1 1 61F48207
+P 10825 2600
+AR Path="/61F05029/61F48207" Ref="#PWR?"  Part="1" 
+AR Path="/61F48207" Ref="#PWR051"  Part="1" 
+F 0 "#PWR051" H 10825 2350 50  0001 C CNN
+F 1 "GND" H 10825 2450 50  0000 C CNN
+F 2 "" H 10825 2600 50  0000 C CNN
+F 3 "" H 10825 2600 50  0000 C CNN
+	1    10825 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:C C?
+U 1 1 61F4820D
+P 10575 2400
+AR Path="/61F05029/61F4820D" Ref="C?"  Part="1" 
+AR Path="/61F4820D" Ref="C12"  Part="1" 
+F 0 "C12" H 10750 2400 50  0000 C CNN
+F 1 "Value" H 10700 2325 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 10613 2250 50  0001 C CNN
+F 3 "" H 10575 2400 50  0001 C CNN
+	1    10575 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F48213
+P 10825 2050
+AR Path="/61F05029/61F48213" Ref="R?"  Part="1" 
+AR Path="/61F48213" Ref="R32"  Part="1" 
+F 0 "R32" H 10895 2096 50  0000 L CNN
+F 1 "R" H 10895 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10755 2050 50  0001 C CNN
+F 3 "" H 10825 2050 50  0001 C CNN
+	1    10825 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10825 2200 10825 2225
+Wire Wire Line
+	10475 1900 10825 1900
+Wire Wire Line
+	10475 2225 10575 2225
+Connection ~ 10825 2225
+Wire Wire Line
+	10825 2225 10825 2250
+Text Label 10475 1900 0    50   ~ 0
+Eana4
+Text Label 10475 2225 0    50   ~ 0
+Eana4f
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F48220
+P 10825 2400
+AR Path="/61F05029/61F48220" Ref="R?"  Part="1" 
+AR Path="/61F48220" Ref="R33"  Part="1" 
+F 0 "R33" H 10895 2446 50  0000 L CNN
+F 1 "R" H 10895 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10755 2400 50  0001 C CNN
+F 3 "" H 10825 2400 50  0001 C CNN
+	1    10825 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10825 2550 10825 2575
+Wire Wire Line
+	10575 2550 10575 2575
+Wire Wire Line
+	10575 2575 10825 2575
+Connection ~ 10825 2575
+Wire Wire Line
+	10825 2575 10825 2600
+Wire Wire Line
+	10575 2250 10575 2225
+Connection ~ 10575 2225
+Wire Wire Line
+	10575 2225 10825 2225
+Text Label 8775 1525 0    50   ~ 0
+GND
+Text Label 8775 1625 0    50   ~ 0
++5V
+Text Label 8750 1425 0    50   ~ 0
+Eana2
+$Comp
+L CRLG-Connectors:Conn_01x03 J?
+U 1 1 61F6088D
+P 9175 1525
+AR Path="/61F05029/61F6088D" Ref="J?"  Part="1" 
+AR Path="/61F6088D" Ref="J21"  Part="1" 
+F 0 "J21" H 9255 1567 50  0000 L CNN
+F 1 "Conn_01x03" H 8850 1325 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 9175 1525 50  0001 C CNN
+F 3 "" H 9175 1525 50  0001 C CNN
+	1    9175 1525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 1425 8975 1425
+Wire Wire Line
+	8750 1525 8975 1525
+Wire Wire Line
+	8975 1625 8750 1625
+Text Label 8025 1525 0    50   ~ 0
+GND
+Text Label 8025 1625 0    50   ~ 0
++5V
+Text Label 8000 1425 0    50   ~ 0
+Eana1
+$Comp
+L CRLG-Connectors:Conn_01x03 J?
+U 1 1 61F60899
+P 8425 1525
+AR Path="/61F05029/61F60899" Ref="J?"  Part="1" 
+AR Path="/61F60899" Ref="J16"  Part="1" 
+F 0 "J16" H 8505 1567 50  0000 L CNN
+F 1 "Conn_01x03" H 8100 1325 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 8425 1525 50  0001 C CNN
+F 3 "" H 8425 1525 50  0001 C CNN
+	1    8425 1525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1425 8225 1425
+Wire Wire Line
+	8000 1525 8225 1525
+Wire Wire Line
+	8225 1625 8000 1625
+$Comp
+L CRLG-Connectors:Conn_01x04 J?
+U 1 1 61F6D55B
+P 10425 1450
+AR Path="/61F05029/61F6D55B" Ref="J?"  Part="1" 
+AR Path="/61F6D55B" Ref="J26"  Part="1" 
+F 0 "J26" H 10505 1442 50  0000 L CNN
+F 1 "Conn_01x04" H 10050 1150 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10425 1450 50  0001 C CNN
+F 3 "" H 10425 1450 50  0001 C CNN
+	1    10425 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10225 1550 9875 1550
+Text Label 10025 1550 0    50   ~ 0
+GND
+Wire Wire Line
+	9875 1650 10225 1650
+Text Label 10025 1650 0    50   ~ 0
++5V
+Wire Wire Line
+	10225 1350 9875 1350
+Wire Wire Line
+	10225 1450 9875 1450
+Text Label 10000 1350 0    50   ~ 0
+Eana3
+Text Label 10000 1450 0    50   ~ 0
+Eana4
+$Comp
+L CRLG-Passive:C C?
+U 1 1 61FA0664
+P 10950 1450
+AR Path="/61F05029/61FA0664" Ref="C?"  Part="1" 
+AR Path="/61FA0664" Ref="C14"  Part="1" 
+F 0 "C14" H 11100 1450 50  0000 C CNN
+F 1 "47u" H 11075 1375 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 10988 1300 50  0001 C CNN
+F 3 "" H 10950 1450 50  0001 C CNN
+	1    10950 1450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61FA066A
+P 10950 1650
+AR Path="/61F05029/61FA066A" Ref="#PWR?"  Part="1" 
+AR Path="/61FA066A" Ref="#PWR053"  Part="1" 
+F 0 "#PWR053" H 10950 1400 50  0001 C CNN
+F 1 "GND" H 10950 1500 50  0000 C CNN
+F 2 "" H 10950 1650 50  0000 C CNN
+F 3 "" H 10950 1650 50  0000 C CNN
+	1    10950 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 1250 10950 1300
+Wire Wire Line
+	10950 1600 10950 1650
+$Comp
+L power:+5V #PWR?
+U 1 1 61FA0672
+P 10950 1250
+AR Path="/61F05029/61FA0672" Ref="#PWR?"  Part="1" 
+AR Path="/61FA0672" Ref="#PWR052"  Part="1" 
+F 0 "#PWR052" H 10950 1100 50  0001 C CNN
+F 1 "+5V" H 10950 1390 50  0000 C CNN
+F 2 "" H 10950 1250 50  0000 C CNN
+F 3 "" H 10950 1250 50  0000 C CNN
+	1    10950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x02 J?
+U 1 1 61FB634F
+P 7875 4525
+AR Path="/61F05029/61FB634F" Ref="J?"  Part="1" 
+AR Path="/61FB634F" Ref="J12"  Part="1" 
+F 0 "J12" H 7955 4471 50  0000 L CNN
+F 1 "Conn_01x02" H 7955 4426 50  0001 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7875 4525 50  0001 C CNN
+F 3 "" H 7875 4525 50  0001 C CNN
+	1    7875 4525
+	1    0    0    -1  
+$EndComp
+Text Label 7400 4525 0    50   ~ 0
+GPIO1
+Wire Wire Line
+	7375 4525 7675 4525
+Wire Wire Line
+	7675 4625 7375 4625
+Text Label 7450 4625 0    50   ~ 0
+GND
+$Comp
+L CRLG-Connectors:Conn_01x02 J?
+U 1 1 61FB6359
+P 7875 4775
+AR Path="/61F05029/61FB6359" Ref="J?"  Part="1" 
+AR Path="/61FB6359" Ref="J13"  Part="1" 
+F 0 "J13" H 7955 4721 50  0000 L CNN
+F 1 "Conn_01x02" H 7955 4676 50  0001 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7875 4775 50  0001 C CNN
+F 3 "" H 7875 4775 50  0001 C CNN
+	1    7875 4775
+	1    0    0    -1  
+$EndComp
+Text Label 7400 4775 0    50   ~ 0
+GPIO2
+Wire Wire Line
+	7375 4775 7675 4775
+Wire Wire Line
+	7675 4875 7375 4875
+Text Label 7450 4875 0    50   ~ 0
+GND
+$Comp
+L CRLG-Connectors:Conn_01x02 J?
+U 1 1 61FB6363
+P 7875 5025
+AR Path="/61F05029/61FB6363" Ref="J?"  Part="1" 
+AR Path="/61FB6363" Ref="J14"  Part="1" 
+F 0 "J14" H 7955 4971 50  0000 L CNN
+F 1 "Conn_01x02" H 7955 4926 50  0001 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7875 5025 50  0001 C CNN
+F 3 "" H 7875 5025 50  0001 C CNN
+	1    7875 5025
+	1    0    0    -1  
+$EndComp
+Text Label 7400 5025 0    50   ~ 0
+GPIO3
+Wire Wire Line
+	7375 5025 7675 5025
+Wire Wire Line
+	7675 5125 7375 5125
+Text Label 7450 5125 0    50   ~ 0
+GND
+$Comp
+L CRLG-Connectors:Conn_01x03 J?
+U 1 1 61FE375B
+P 8800 4650
+AR Path="/61F05029/61FE375B" Ref="J?"  Part="1" 
+AR Path="/61FE375B" Ref="J18"  Part="1" 
+F 0 "J18" H 8880 4646 50  0000 L CNN
+F 1 "Conn_01x03" H 8880 4601 50  0001 L CNN
+F 2 "Servomotors:Servomotor-3x254" H 8800 4650 50  0001 C CNN
+F 3 "" H 8800 4650 50  0001 C CNN
+	1    8800 4650
+	1    0    0    -1  
+$EndComp
+Text Label 8300 4650 0    50   ~ 0
++Vservo
+Text Label 8300 4550 0    50   ~ 0
+SPWM1
+Wire Wire Line
+	8275 4550 8600 4550
+Wire Wire Line
+	8600 4750 8275 4750
+Text Label 8350 4750 0    50   ~ 0
+GND
+$Comp
+L CRLG-Connectors:Conn_01x03 J?
+U 1 1 61FE3767
+P 8800 5025
+AR Path="/61F05029/61FE3767" Ref="J?"  Part="1" 
+AR Path="/61FE3767" Ref="J19"  Part="1" 
+F 0 "J19" H 8880 5021 50  0000 L CNN
+F 1 "Conn_01x03" H 8880 4976 50  0001 L CNN
+F 2 "Servomotors:Servomotor-3x254" H 8800 5025 50  0001 C CNN
+F 3 "" H 8800 5025 50  0001 C CNN
+	1    8800 5025
+	1    0    0    -1  
+$EndComp
+Text Label 8275 5025 0    50   ~ 0
++Vservo
+Text Label 8300 4925 0    50   ~ 0
+SPWM2
+Wire Wire Line
+	8275 4925 8600 4925
+Wire Wire Line
+	8600 5125 8275 5125
+Text Label 8350 5125 0    50   ~ 0
+GND
+Wire Wire Line
+	8275 4650 8600 4650
+Wire Wire Line
+	8600 5025 8275 5025
+Text Notes 8200 4400 0    50   ~ 0
+Sorties servo
+$Comp
+L CRLG-Connectors:Conn_01x03 J?
+U 1 1 620501F1
+P 8800 5400
+AR Path="/61F05029/620501F1" Ref="J?"  Part="1" 
+AR Path="/620501F1" Ref="J20"  Part="1" 
+F 0 "J20" H 8880 5396 50  0000 L CNN
+F 1 "Conn_01x03" H 8880 5351 50  0001 L CNN
+F 2 "Servomotors:Servomotor-3x254" H 8800 5400 50  0001 C CNN
+F 3 "" H 8800 5400 50  0001 C CNN
+	1    8800 5400
+	1    0    0    -1  
+$EndComp
+Text Label 8275 5400 0    50   ~ 0
++Vservo
+Text Label 8300 5300 0    50   ~ 0
+SPWM3
+Wire Wire Line
+	8275 5300 8600 5300
+Wire Wire Line
+	8600 5500 8275 5500
+Text Label 8350 5500 0    50   ~ 0
+GND
+Wire Wire Line
+	8600 5400 8275 5400
+$Comp
+L CRLG-Connectors:Conn_01x03 J?
+U 1 1 6205E2BC
+P 8700 6050
+AR Path="/61F05029/6205E2BC" Ref="J?"  Part="1" 
+AR Path="/6205E2BC" Ref="J17"  Part="1" 
+F 0 "J17" H 8780 6046 50  0000 L CNN
+F 1 "Conn_01x03" H 8780 6001 50  0001 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 8700 6050 50  0001 C CNN
+F 3 "" H 8700 6050 50  0001 C CNN
+	1    8700 6050
+	1    0    0    -1  
+$EndComp
+Text Label 8250 6050 0    50   ~ 0
+VBAT
+Text Label 7375 5950 0    50   ~ 0
+Efreqf
+Wire Wire Line
+	8500 6150 8175 6150
+Text Label 8250 6150 0    50   ~ 0
+GND
+Wire Wire Line
+	8500 6050 8175 6050
+Wire Notes Line
+	11125 1050 11125 2825
+Wire Notes Line
+	7850 2825 7850 1050
+Wire Notes Line
+	7850 1050 11125 1050
+$Comp
+L power:GND #PWR?
+U 1 1 620CF908
+P 7625 2625
+AR Path="/61F05029/620CF908" Ref="#PWR?"  Part="1" 
+AR Path="/620CF908" Ref="#PWR040"  Part="1" 
+F 0 "#PWR040" H 7625 2375 50  0001 C CNN
+F 1 "GND" H 7625 2475 50  0000 C CNN
+F 2 "" H 7625 2625 50  0000 C CNN
+F 3 "" H 7625 2625 50  0000 C CNN
+	1    7625 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:C C?
+U 1 1 620CF912
+P 7375 2425
+AR Path="/61F05029/620CF912" Ref="C?"  Part="1" 
+AR Path="/620CF912" Ref="C8"  Part="1" 
+F 0 "C8" H 7550 2425 50  0000 C CNN
+F 1 "Value" H 7500 2350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 7413 2275 50  0001 C CNN
+F 3 "" H 7375 2425 50  0001 C CNN
+	1    7375 2425
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:R R?
+U 1 1 620CF91C
+P 7625 2075
+AR Path="/61F05029/620CF91C" Ref="R?"  Part="1" 
+AR Path="/620CF91C" Ref="R14"  Part="1" 
+F 0 "R14" H 7695 2121 50  0000 L CNN
+F 1 "R" H 7695 2030 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7555 2075 50  0001 C CNN
+F 3 "" H 7625 2075 50  0001 C CNN
+	1    7625 2075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7625 2225 7625 2250
+Wire Wire Line
+	7275 1925 7625 1925
+Connection ~ 7625 2250
+Wire Wire Line
+	7625 2250 7625 2275
+Text Label 7275 1925 0    50   ~ 0
+VBAT
+Text Label 7175 2250 0    50   ~ 0
+Eana_Vbat
+$Comp
+L CRLG-Passive:R R?
+U 1 1 620CF92D
+P 7625 2425
+AR Path="/61F05029/620CF92D" Ref="R?"  Part="1" 
+AR Path="/620CF92D" Ref="R15"  Part="1" 
+F 0 "R15" H 7695 2471 50  0000 L CNN
+F 1 "R" H 7695 2380 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7555 2425 50  0001 C CNN
+F 3 "" H 7625 2425 50  0001 C CNN
+	1    7625 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7625 2575 7625 2600
+Wire Wire Line
+	7375 2575 7375 2600
+Wire Wire Line
+	7375 2600 7625 2600
+Connection ~ 7625 2600
+Wire Wire Line
+	7625 2600 7625 2625
+Wire Wire Line
+	7375 2275 7375 2250
+Wire Wire Line
+	7375 2250 7625 2250
+Wire Wire Line
+	7375 2250 7175 2250
+Connection ~ 7375 2250
+Text Notes 7300 4400 0    50   ~ 0
+Entrées/Sorties TOR
+Wire Notes Line
+	7850 1800 7125 1800
+Wire Notes Line
+	7125 1800 7125 2825
+Wire Notes Line
+	7125 2825 11125 2825
+Text Label 6750 1225 0    50   ~ 0
+I2C_SCL
+Text Label 6750 1125 0    50   ~ 0
+I2C_SDA
+$Comp
+L power:GND #PWR?
+U 1 1 621D5204
+P 7125 1375
+AR Path="/5D3C9FDA/621D5204" Ref="#PWR?"  Part="1" 
+AR Path="/621D5204" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 7125 1125 50  0001 C CNN
+F 1 "GND" H 7125 1225 50  0000 C CNN
+F 2 "" H 7125 1375 50  0000 C CNN
+F 3 "" H 7125 1375 50  0000 C CNN
+	1    7125 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x04 J?
+U 1 1 621D520A
+P 7350 1225
+AR Path="/5D3C9FDA/621D520A" Ref="J?"  Part="1" 
+AR Path="/621D520A" Ref="J11"  Part="1" 
+F 0 "J11" H 7430 1217 50  0000 L CNN
+F 1 "Conn_01x04" H 7200 925 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 7350 1225 50  0001 C CNN
+F 3 "" H 7350 1225 50  0001 C CNN
+	1    7350 1225
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 621D5210
+P 7125 950
+AR Path="/5D3C9FDA/621D5210" Ref="#PWR?"  Part="1" 
+AR Path="/621D5210" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 7125 800 50  0001 C CNN
+F 1 "+5V" H 7125 1090 50  0000 C CNN
+F 2 "" H 7125 950 50  0000 C CNN
+F 3 "" H 7125 950 50  0000 C CNN
+	1    7125 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1125 7150 1125
+Wire Wire Line
+	7125 950  7125 1025
+Wire Wire Line
+	7125 1025 7150 1025
+Wire Wire Line
+	7150 1325 7125 1325
+Wire Wire Line
+	7125 1325 7125 1375
+Wire Wire Line
+	7150 1225 6750 1225
+Text Label 5875 1200 0    50   ~ 0
+I2C_SCL
+Text Label 5875 1100 0    50   ~ 0
+I2C_SDA
+$Comp
+L power:GND #PWR?
+U 1 1 6221D4C1
+P 6250 1350
+AR Path="/5D3C9FDA/6221D4C1" Ref="#PWR?"  Part="1" 
+AR Path="/6221D4C1" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 6250 1100 50  0001 C CNN
+F 1 "GND" H 6250 1200 50  0000 C CNN
+F 2 "" H 6250 1350 50  0000 C CNN
+F 3 "" H 6250 1350 50  0000 C CNN
+	1    6250 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x04 J?
+U 1 1 6221D4C7
+P 6475 1200
+AR Path="/5D3C9FDA/6221D4C7" Ref="J?"  Part="1" 
+AR Path="/6221D4C7" Ref="J6"  Part="1" 
+F 0 "J6" H 6555 1192 50  0000 L CNN
+F 1 "Conn_01x04" H 6300 900 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 6475 1200 50  0001 C CNN
+F 3 "" H 6475 1200 50  0001 C CNN
+	1    6475 1200
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6221D4CD
+P 6250 925
+AR Path="/5D3C9FDA/6221D4CD" Ref="#PWR?"  Part="1" 
+AR Path="/6221D4CD" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 6250 775 50  0001 C CNN
+F 1 "+5V" H 6250 1065 50  0000 C CNN
+F 2 "" H 6250 925 50  0000 C CNN
+F 3 "" H 6250 925 50  0000 C CNN
+	1    6250 925 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5875 1100 6275 1100
+Wire Wire Line
+	6250 925  6250 1000
+Wire Wire Line
+	6250 1000 6275 1000
+Wire Wire Line
+	6275 1300 6250 1300
+Wire Wire Line
+	6250 1300 6250 1350
+Wire Wire Line
+	6275 1200 5875 1200
+Text Label 4050 1200 0    50   ~ 0
+I2C_SCL
+Text Label 4050 1100 0    50   ~ 0
+I2C_SDA
+$Comp
+L power:GND #PWR?
+U 1 1 6222C5ED
+P 4425 1350
+AR Path="/5D3C9FDA/6222C5ED" Ref="#PWR?"  Part="1" 
+AR Path="/6222C5ED" Ref="#PWR019"  Part="1" 
+F 0 "#PWR019" H 4425 1100 50  0001 C CNN
+F 1 "GND" H 4425 1200 50  0000 C CNN
+F 2 "" H 4425 1350 50  0000 C CNN
+F 3 "" H 4425 1350 50  0000 C CNN
+	1    4425 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x04 J?
+U 1 1 6222C5F3
+P 4650 1200
+AR Path="/5D3C9FDA/6222C5F3" Ref="J?"  Part="1" 
+AR Path="/6222C5F3" Ref="J3"  Part="1" 
+F 0 "J3" H 4730 1192 50  0000 L CNN
+F 1 "Conn_01x04" H 4500 900 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 4650 1200 50  0001 C CNN
+F 3 "" H 4650 1200 50  0001 C CNN
+	1    4650 1200
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6222C5F9
+P 4425 925
+AR Path="/5D3C9FDA/6222C5F9" Ref="#PWR?"  Part="1" 
+AR Path="/6222C5F9" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 4425 775 50  0001 C CNN
+F 1 "+5V" H 4425 1065 50  0000 C CNN
+F 2 "" H 4425 925 50  0000 C CNN
+F 3 "" H 4425 925 50  0000 C CNN
+	1    4425 925 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1100 4450 1100
+Wire Wire Line
+	4425 925  4425 1000
+Wire Wire Line
+	4425 1000 4450 1000
+Wire Wire Line
+	4450 1300 4425 1300
+Wire Wire Line
+	4425 1300 4425 1350
+Text Label 4950 1200 0    50   ~ 0
+I2C_SCL
+Text Label 4950 1100 0    50   ~ 0
+I2C_SDA
+$Comp
+L power:GND #PWR?
+U 1 1 6223D145
+P 5325 1350
+AR Path="/5D3C9FDA/6223D145" Ref="#PWR?"  Part="1" 
+AR Path="/6223D145" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 5325 1100 50  0001 C CNN
+F 1 "GND" H 5325 1200 50  0000 C CNN
+F 2 "" H 5325 1350 50  0000 C CNN
+F 3 "" H 5325 1350 50  0000 C CNN
+	1    5325 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x04 J?
+U 1 1 6223D14B
+P 5550 1200
+AR Path="/5D3C9FDA/6223D14B" Ref="J?"  Part="1" 
+AR Path="/6223D14B" Ref="J5"  Part="1" 
+F 0 "J5" H 5630 1192 50  0000 L CNN
+F 1 "Conn_01x04" H 5425 900 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 5550 1200 50  0001 C CNN
+F 3 "" H 5550 1200 50  0001 C CNN
+	1    5550 1200
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6223D151
+P 5325 925
+AR Path="/5D3C9FDA/6223D151" Ref="#PWR?"  Part="1" 
+AR Path="/6223D151" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 5325 775 50  0001 C CNN
+F 1 "+5V" H 5325 1065 50  0000 C CNN
+F 2 "" H 5325 925 50  0000 C CNN
+F 3 "" H 5325 925 50  0000 C CNN
+	1    5325 925 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1100 5350 1100
+Wire Wire Line
+	5325 925  5325 1000
+Wire Wire Line
+	5325 1000 5350 1000
+Wire Wire Line
+	5350 1300 5325 1300
+Wire Wire Line
+	5325 1300 5325 1350
+Wire Wire Line
+	5350 1200 4950 1200
+Text Notes 4750 575  0    50   ~ 0
+I2C
+Text Notes 7175 1775 0    50   ~ 0
+Mesure Vbat
+Text Notes 7875 1000 0    50   ~ 0
+Entrées analogiques
+$Comp
+L power:GND #PWR02
+U 1 1 622EC6A8
+P 1200 7125
+F 0 "#PWR02" H 1200 6875 50  0001 C CNN
+F 1 "GND" H 1205 6952 50  0000 C CNN
+F 2 "" H 1200 7125 50  0001 C CNN
+F 3 "" H 1200 7125 50  0001 C CNN
+	1    1200 7125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 7075 1200 7075
+Wire Wire Line
+	1200 7075 1200 7125
+Text Label 1250 6775 0    50   ~ 0
+RS232_1_TX
+Text Label 1250 6875 0    50   ~ 0
+RS232_1_RX
+Text Notes 550  7750 0    50   ~ 0
+Précisions pour les RS232 : \n  - TX est une sortie du microcontrôleur\n  - RX est une entrée du microcontrôleur\n\n
+Text Notes 700  6575 0    50   ~ 0
+Molex KK 2.54mm.\nRef RS: 483-8483
+Text Label 1200 6975 0    50   ~ 0
+RS232_1_GPIO
+Wire Wire Line
+	1150 6775 1775 6775
+Wire Wire Line
+	1150 6875 1775 6875
+Wire Wire Line
+	1150 6975 1775 6975
+Wire Notes Line
+	550  6400 550  7700
+Wire Notes Line
+	550  7700 2225 7700
+Wire Notes Line
+	2225 7700 2225 6400
+Wire Notes Line
+	2225 6400 550  6400
+Text Notes 575  6375 0    50   ~ 0
+RS232 servos AX
+$Comp
+L CRLG-Passive:C C5
+U 1 1 623D9E8B
+P 3975 2225
+F 0 "C5" H 4090 2271 50  0000 L CNN
+F 1 "47u" H 4090 2180 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4013 2075 50  0001 C CNN
+F 3 "" H 3975 2225 50  0001 C CNN
+	1    3975 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 623D9E91
+P 3975 2425
+F 0 "#PWR017" H 3975 2175 50  0001 C CNN
+F 1 "GND" V 3980 2297 50  0000 R CNN
+F 2 "" H 3975 2425 50  0001 C CNN
+F 3 "" H 3975 2425 50  0001 C CNN
+	1    3975 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 2025 3975 2075
+Wire Wire Line
+	3975 2375 3975 2425
+$Comp
+L power:+5V #PWR016
+U 1 1 623D9E99
+P 3975 2025
+F 0 "#PWR016" H 3975 1875 50  0001 C CNN
+F 1 "+5V" H 3990 2198 50  0000 C CNN
+F 2 "" H 3975 2025 50  0001 C CNN
+F 3 "" H 3975 2025 50  0001 C CNN
+	1    3975 2025
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:C C4
+U 1 1 623F5EB5
+P 3600 2225
+F 0 "C4" H 3715 2271 50  0000 L CNN
+F 1 "100n" H 3715 2180 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3638 2075 50  0001 C CNN
+F 3 "" H 3600 2225 50  0001 C CNN
+	1    3600 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 623F5EBB
+P 3600 2425
+F 0 "#PWR014" H 3600 2175 50  0001 C CNN
+F 1 "GND" V 3605 2297 50  0000 R CNN
+F 2 "" H 3600 2425 50  0001 C CNN
+F 3 "" H 3600 2425 50  0001 C CNN
+	1    3600 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2025 3600 2075
+Wire Wire Line
+	3600 2375 3600 2425
+$Comp
+L power:+5V #PWR013
+U 1 1 623F5EC3
+P 3600 2025
+F 0 "#PWR013" H 3600 1875 50  0001 C CNN
+F 1 "+5V" H 3615 2198 50  0000 C CNN
+F 2 "" H 3600 2025 50  0001 C CNN
+F 3 "" H 3600 2025 50  0001 C CNN
+	1    3600 2025
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x03 J9
+U 1 1 62424D13
+P 7275 3450
+F 0 "J9" H 7193 3767 50  0000 C CNN
+F 1 "Conn_01x04" H 7193 3676 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 7275 3450 50  0001 C CNN
+F 3 "" H 7275 3450 50  0001 C CNN
+	1    7275 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7475 3350 7850 3350
+Text Label 7500 3350 0    50   ~ 0
+Mot1_PWM
+Wire Wire Line
+	7475 3450 7850 3450
+Wire Wire Line
+	7475 3550 7850 3550
+Text Label 7500 3450 0    50   ~ 0
+Mot1_Sens2
+Text Label 7500 3550 0    50   ~ 0
+Mot1_Sens1
+$Comp
+L CRLG-Connectors:Conn_01x03 J10
+U 1 1 624E1274
+P 7275 4000
+F 0 "J10" H 7193 4317 50  0000 C CNN
+F 1 "Conn_01x04" H 7193 4226 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 7275 4000 50  0001 C CNN
+F 3 "" H 7275 4000 50  0001 C CNN
+	1    7275 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7475 3900 7850 3900
+Text Label 7500 3900 0    50   ~ 0
+Mot2_PWM
+Wire Wire Line
+	7475 4000 7850 4000
+Wire Wire Line
+	7475 4100 7850 4100
+Text Label 7500 4000 0    50   ~ 0
+Mot2_Sens2
+Text Label 7500 4100 0    50   ~ 0
+Mot2_Sens1
+$Comp
+L CRLG-Connectors:Conn_01x03 J15
+U 1 1 624F73EF
+P 8200 3450
+F 0 "J15" H 8118 3767 50  0000 C CNN
+F 1 "Conn_01x04" H 8118 3676 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 8200 3450 50  0001 C CNN
+F 3 "" H 8200 3450 50  0001 C CNN
+	1    8200 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3350 8775 3350
+Text Label 8425 3350 0    50   ~ 0
+Mot3_PWM
+Wire Wire Line
+	8400 3450 8775 3450
+Wire Wire Line
+	8400 3550 8775 3550
+Text Label 8425 3450 0    50   ~ 0
+Mot3_Sens2
+Text Label 8425 3550 0    50   ~ 0
+Mot3_Sens1
+Wire Notes Line
+	7100 3050 8925 3050
+Wire Notes Line
+	8925 3050 8925 4200
+Wire Notes Line
+	8925 4200 7075 4200
+Wire Notes Line
+	7075 4200 7075 3050
+Text Notes 7075 3025 0    50   ~ 0
+Commandes ponts en H
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 62633ACB
+P 2550 7375
+F 0 "H1" H 2650 7424 50  0000 L CNN
+F 1 "MountingHole_Pad" V 2425 7000 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 2550 7375 50  0001 C CNN
+F 3 "~" H 2550 7375 50  0001 C CNN
+	1    2550 7375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 62633AD1
+P 2550 7525
+F 0 "#PWR08" H 2550 7275 50  0001 C CNN
+F 1 "GND" H 2555 7352 50  0000 C CNN
+F 2 "" H 2550 7525 50  0001 C CNN
+F 3 "" H 2550 7525 50  0001 C CNN
+	1    2550 7525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 7525 2550 7475
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 62672834
+P 2850 7375
+AR Path="/6261F44A/62672834" Ref="H?"  Part="1" 
+AR Path="/62672834" Ref="H2"  Part="1" 
+F 0 "H2" H 2950 7424 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3000 7175 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 2850 7375 50  0001 C CNN
+F 3 "~" H 2850 7375 50  0001 C CNN
+	1    2850 7375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 6267283A
+P 2850 7525
+F 0 "#PWR09" H 2850 7275 50  0001 C CNN
+F 1 "GND" H 2855 7352 50  0000 C CNN
+F 2 "" H 2850 7525 50  0001 C CNN
+F 3 "" H 2850 7525 50  0001 C CNN
+	1    2850 7525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 7525 2850 7475
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 626A02CE
+P 3150 7375
+AR Path="/6261F44A/626A02CE" Ref="H?"  Part="1" 
+AR Path="/626A02CE" Ref="H3"  Part="1" 
+F 0 "H3" H 3250 7424 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3300 7175 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 3150 7375 50  0001 C CNN
+F 3 "~" H 3150 7375 50  0001 C CNN
+	1    3150 7375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 626A02D4
+P 3150 7525
+F 0 "#PWR010" H 3150 7275 50  0001 C CNN
+F 1 "GND" H 3155 7352 50  0000 C CNN
+F 2 "" H 3150 7525 50  0001 C CNN
+F 3 "" H 3150 7525 50  0001 C CNN
+	1    3150 7525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 7525 3150 7475
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 626CB8C2
+P 3450 7375
+AR Path="/6261F44A/626CB8C2" Ref="H?"  Part="1" 
+AR Path="/626CB8C2" Ref="H4"  Part="1" 
+F 0 "H4" H 3550 7424 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3600 7175 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 3450 7375 50  0001 C CNN
+F 3 "~" H 3450 7375 50  0001 C CNN
+	1    3450 7375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 626CB8C8
+P 3450 7525
+F 0 "#PWR012" H 3450 7275 50  0001 C CNN
+F 1 "GND" H 3455 7352 50  0000 C CNN
+F 2 "" H 3450 7525 50  0001 C CNN
+F 3 "" H 3450 7525 50  0001 C CNN
+	1    3450 7525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 7525 3450 7475
+$Comp
+L CRLG_Regulators:MIC29502WT U1
+U 1 1 61F9A58B
+P 1425 1950
+F 0 "U1" H 1425 2317 50  0000 C CNN
+F 1 "MIC29502WT" H 1425 2226 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 1525 1700 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/20005685a.pdf" H 1425 1950 50  0001 C CNN
+	1    1425 1950
+	1    0    0    -1  
+$EndComp
+Text Label 2400 1850 0    50   ~ 0
++Vservo
+Wire Wire Line
+	1025 1850 875  1850
+Wire Wire Line
+	875  1850 875  2050
+Wire Wire Line
+	875  2050 1025 2050
+Connection ~ 875  1850
+Wire Wire Line
+	875  1850 600  1850
+Text Label 600  1850 0    50   ~ 0
+VBAT
+$Comp
+L power:GND #PWR03
+U 1 1 61FDCD8F
+P 1425 2700
+F 0 "#PWR03" H 1425 2450 50  0001 C CNN
+F 1 "GND" H 1425 2550 50  0000 C CNN
+F 2 "" H 1425 2700 50  0000 C CNN
+F 3 "" H 1425 2700 50  0000 C CNN
+	1    1425 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:CP C3
+U 1 1 6201B096
+P 2650 2250
+F 0 "C3" H 2768 2296 50  0000 L CNN
+F 1 "220u" H 2768 2205 50  0000 L CNN
+F 2 "Passive:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 2688 2100 50  0001 C CNN
+F 3 "" H 2650 2250 50  0001 C CNN
+	1    2650 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1850 2250 1925
+$Comp
+L CRLG-Passive:R R?
+U 1 1 61F20357
+P 2250 2425
+AR Path="/61F05029/61F20357" Ref="R?"  Part="1" 
+AR Path="/61F20357" Ref="R3"  Part="1" 
+F 0 "R3" H 2075 2450 50  0000 L CNN
+F 1 "220" H 2025 2375 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 2180 2425 50  0001 C CNN
+F 3 "" H 2250 2425 50  0001 C CNN
+	1    2250 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 61F26E87
+P 2250 2075
+F 0 "RV1" H 2181 2121 50  0000 R CNN
+F 1 "2k" H 2181 2030 50  0000 R CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_PV36W" H 2250 2075 50  0001 C CNN
+F 3 "~" H 2250 2075 50  0001 C CNN
+	1    2250 2075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 2050 1850 2050
+Wire Wire Line
+	1850 2050 1850 2225
+Text Notes 1550 2750 0    50   ~ 0
+Vout=(1+ R1/R2) * 1.24
+Wire Wire Line
+	1425 2250 1425 2575
+Wire Wire Line
+	1825 1850 2250 1850
+Wire Wire Line
+	2250 1850 2650 1850
+Wire Wire Line
+	2650 1850 2650 2100
+Connection ~ 2250 1850
+Wire Wire Line
+	2650 2400 2650 2575
+Wire Wire Line
+	2650 2575 2250 2575
+Wire Wire Line
+	2250 2575 1425 2575
+Connection ~ 2250 2575
+Connection ~ 1425 2575
+Wire Wire Line
+	1425 2575 1425 2700
+Wire Wire Line
+	2250 2275 2250 2225
+Connection ~ 2250 2225
+Wire Wire Line
+	2250 2225 2400 2225
+Wire Wire Line
+	2400 2225 2400 2075
+Wire Wire Line
+	1850 2225 2250 2225
+Text Notes 675  2250 0    50   ~ 0
+RS: 910-1408P
+$Comp
+L CRLG-Passive:R R4
+U 1 1 61F74D75
+P 3175 2075
+F 0 "R4" V 3000 2000 50  0000 L CNN
+F 1 "470" V 3075 2000 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3105 2075 50  0001 C CNN
+F 3 "" H 3175 2075 50  0001 C CNN
+	1    3175 2075
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRLG-Passive:LED D1
+U 1 1 61F74D7F
+P 3175 2375
+F 0 "D1" H 3252 2367 45  0000 L CNN
+F 1 "LED" H 3252 2283 45  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 2975 2375 20  0001 C CNN
+F 3 "" H 3175 2375 50  0001 C CNN
+	1    3175 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 61F74D89
+P 3175 2625
+F 0 "#PWR011" H 3175 2375 50  0001 C CNN
+F 1 "GND" H 3250 2500 50  0000 R CNN
+F 2 "" H 3175 2625 50  0001 C CNN
+F 3 "" H 3175 2625 50  0001 C CNN
+	1    3175 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3175 2225 3175 2275
+Wire Wire Line
+	3175 2575 3175 2625
+Wire Wire Line
+	2650 1850 3175 1850
+Wire Wire Line
+	3175 1850 3175 1925
+Connection ~ 2650 1850
+Wire Wire Line
+	2525 5400 1900 5400
+Wire Wire Line
+	2525 5500 1900 5500
+Text Label 1975 5400 0    50   ~ 0
+MOSFET_1
+Text Label 1975 5500 0    50   ~ 0
+MOSFET_2
+$Comp
+L CRLG_Transistors:BTS117 Q2
+U 1 1 62045FC1
+P 6225 2375
+F 0 "Q2" H 6431 2421 50  0000 L CNN
+F 1 "BTS117" H 6431 2330 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6425 2475 50  0001 C CNN
+F 3 "~" H 6225 2375 50  0001 C CNN
+	1    6225 2375
+	1    0    0    -1  
+$EndComp
+Text Label 5650 2375 0    50   ~ 0
+MOSFET_2
+Wire Wire Line
+	6025 2375 5650 2375
+$Comp
+L CRLG-Connectors:Conn_XT30F J7
+U 1 1 62045FC9
+P 6525 2125
+F 0 "J7" H 6650 2075 50  0000 C CNN
+F 1 "Conn_XT30F" H 6600 1925 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 6525 2125 50  0001 C CNN
+F 3 "" H 6525 2125 50  0001 C CNN
+	1    6525 2125
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 62045FCF
+P 6325 2625
+F 0 "#PWR034" H 6325 2375 50  0001 C CNN
+F 1 "GND" H 6330 2452 50  0000 C CNN
+F 2 "" H 6325 2625 50  0001 C CNN
+F 3 "" H 6325 2625 50  0001 C CNN
+	1    6325 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6325 2575 6325 2625
+Wire Wire Line
+	6325 2175 6325 2125
+Wire Wire Line
+	6325 2025 6325 1875
+Text Label 6050 1875 0    50   ~ 0
+VBAT
+Text Notes 5675 2550 0    50   ~ 0
+RS: 110-7758
+$Comp
+L CRLG-Passive:R R10
+U 1 1 62045FDA
+P 5850 2025
+F 0 "R10" H 5920 2071 50  0000 L CNN
+F 1 "R" H 5975 1975 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5780 2025 50  0001 C CNN
+F 3 "" H 5850 2025 50  0001 C CNN
+	1    5850 2025
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:LED D?
+U 1 1 62045FE0
+P 6025 2175
+AR Path="/5D3C9FDA/62045FE0" Ref="D?"  Part="1" 
+AR Path="/62045FE0" Ref="D4"  Part="1" 
+F 0 "D4" V 6100 2075 45  0000 L CNN
+F 1 "LED" V 6175 2025 45  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 5825 2175 20  0001 C CNN
+F 3 "" H 6025 2175 50  0001 C CNN
+	1    6025 2175
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5850 1875 6325 1875
+Wire Wire Line
+	5850 2175 5925 2175
+Wire Wire Line
+	6225 2175 6325 2175
+Connection ~ 6325 2175
+$Comp
+L CRLG_Transistors:BTS117 Q1
+U 1 1 6215487E
+P 5000 2375
+F 0 "Q1" H 5206 2421 50  0000 L CNN
+F 1 "BTS117" H 5206 2330 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5200 2475 50  0001 C CNN
+F 3 "~" H 5000 2375 50  0001 C CNN
+	1    5000 2375
+	1    0    0    -1  
+$EndComp
+Text Label 4425 2375 0    50   ~ 0
+MOSFET_1
+Wire Wire Line
+	4800 2375 4425 2375
+$Comp
+L CRLG-Connectors:Conn_XT30F J4
+U 1 1 62154886
+P 5300 2125
+F 0 "J4" H 5425 2075 50  0000 C CNN
+F 1 "Conn_XT30F" H 5375 1925 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 5300 2125 50  0001 C CNN
+F 3 "" H 5300 2125 50  0001 C CNN
+	1    5300 2125
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 6215488C
+P 5100 2625
+F 0 "#PWR023" H 5100 2375 50  0001 C CNN
+F 1 "GND" H 5105 2452 50  0000 C CNN
+F 2 "" H 5100 2625 50  0001 C CNN
+F 3 "" H 5100 2625 50  0001 C CNN
+	1    5100 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2575 5100 2625
+Wire Wire Line
+	5100 2175 5100 2125
+Wire Wire Line
+	5100 2025 5100 1875
+Text Label 4825 1875 0    50   ~ 0
+VBAT
+$Comp
+L CRLG-Passive:R R7
+U 1 1 62154897
+P 4625 2025
+F 0 "R7" H 4695 2071 50  0000 L CNN
+F 1 "R" H 4750 1975 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4555 2025 50  0001 C CNN
+F 3 "" H 4625 2025 50  0001 C CNN
+	1    4625 2025
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRLG-Passive:LED D?
+U 1 1 6215489D
+P 4800 2175
+AR Path="/5D3C9FDA/6215489D" Ref="D?"  Part="1" 
+AR Path="/6215489D" Ref="D2"  Part="1" 
+F 0 "D2" V 4875 2075 45  0000 L CNN
+F 1 "LED" V 4950 2025 45  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 4600 2175 20  0001 C CNN
+F 3 "" H 4800 2175 50  0001 C CNN
+	1    4800 2175
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4625 1875 5100 1875
+Wire Wire Line
+	4625 2175 4700 2175
+Wire Wire Line
+	5000 2175 5100 2175
+Connection ~ 5100 2175
+Wire Notes Line
+	6850 1750 6850 2850
+Wire Notes Line
+	6850 2850 4400 2850
+Wire Notes Line
+	4400 2850 4400 1750
+Wire Notes Line
+	4400 1750 6850 1750
+Text Notes 4400 1725 0    50   ~ 0
+Sorties puissance commutées
+Wire Notes Line
+	6100 4850 7050 4850
+Wire Notes Line
+	6100 5500 6100 4850
+Wire Notes Line
+	7050 5500 6100 5500
+Wire Notes Line
+	7050 4850 7050 5500
+Text Label 6200 5400 0    50   ~ 0
+RS232_2_RX
+Text Label 6200 5300 0    50   ~ 0
+RS232_2_TX
+Text Label 6375 5200 0    50   ~ 0
+GND
+Text Label 6350 5100 0    50   ~ 0
++5V
+Wire Wire Line
+	6700 5100 6175 5100
+Wire Wire Line
+	6700 5400 6175 5400
+Wire Wire Line
+	6700 5300 6175 5300
+Wire Wire Line
+	6700 5200 6175 5200
+Text Notes 6825 4825 0    50   ~ 0
+RS232
+$Comp
+L CRLG-Connectors:Conn_01x04 J2
+U 1 1 622EC69F
+P 950 6875
+F 0 "J2" H 950 6575 50  0000 C CNN
+F 1 "Conn_01x04" H 868 7101 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 950 6875 50  0001 C CNN
+F 3 "" H 950 6875 50  0001 C CNN
+	1    950  6875
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CRLG-Connectors:Conn_01x04 J8
+U 1 1 6228943C
+P 6900 5200
+F 0 "J8" H 6875 5500 50  0000 C CNN
+F 1 "Conn_01x04" H 6700 5425 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 6900 5200 50  0001 C CNN
+F 3 "" H 6900 5200 50  0001 C CNN
+	1    6900 5200
+	1    0    0    -1  
+$EndComp
+Text Notes 1675 2300 0    50   ~ 0
+RS: 769-2176
+Wire Wire Line
+	8500 5950 8000 5950
+Wire Notes Line
+	8200 4425 9000 4425
+Wire Notes Line
+	9000 4425 9000 5575
+Wire Notes Line
+	9000 5575 8200 5575
+Wire Notes Line
+	8200 5575 8200 4425
+$Comp
+L CRLG-Passive:R R17
+U 1 1 621077E1
+P 7850 5950
+F 0 "R17" V 7675 5875 50  0000 L CNN
+F 1 "4.7k" V 7750 5875 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7780 5950 50  0001 C CNN
+F 3 "" H 7850 5950 50  0001 C CNN
+	1    7850 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L CRLG-Passive:R R16
+U 1 1 6210C460
+P 7700 6100
+F 0 "R16" H 7770 6146 50  0000 L CNN
+F 1 "1.8k" H 7770 6055 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7630 6100 50  0001 C CNN
+F 3 "" H 7700 6100 50  0001 C CNN
+	1    7700 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR041
+U 1 1 6210CDEC
+P 7700 6250
+F 0 "#PWR041" H 7700 6000 50  0001 C CNN
+F 1 "GND" H 7775 6125 50  0000 R CNN
+F 2 "" H 7700 6250 50  0001 C CNN
+F 3 "" H 7700 6250 50  0001 C CNN
+	1    7700 6250
+	1    0    0    -1  
+$EndComp
+Text Notes 7750 6275 0    50   ~ 0
+12V -> 3.3V
+Wire Wire Line
+	7700 5950 7375 5950
+Connection ~ 7700 5950
+Text Label 8250 5950 0    50   ~ 0
+Efreq
+Wire Notes Line
+	7300 5700 7300 6425
+Wire Notes Line
+	7300 6425 8975 6425
+Wire Notes Line
+	8975 6425 8975 5700
+Wire Notes Line
+	8975 5700 7300 5700
+Text Notes 7325 5675 0    50   ~ 0
+Entrée fréquentielle
+NoConn ~ 4725 5000
+Text Notes 4775 5025 0    39   ~ 0
+BUILD_IN LED
+Wire Notes Line
+	7300 4425 7300 5200
+Wire Notes Line
+	7300 5200 8100 5200
+Wire Notes Line
+	8100 5200 8100 4425
+Wire Notes Line
+	8100 4425 7300 4425
+Wire Wire Line
+	4725 5400 5400 5400
+Text Label 1975 3800 0    50   ~ 0
+LED3
+Text Notes 625  3925 0    50   ~ 0
+ATTENTION : problème pins\n  0, 5, 37 multiplexées
+Wire Wire Line
+	4725 4500 5350 4500
+Wire Wire Line
+	3750 1200 4450 1200
+Wire Notes Line
+	7675 500  7675 1575
+Wire Notes Line
+	7675 1575 3625 1575
+Wire Notes Line
+	3625 1575 3625 500 
+Wire Notes Line
+	3625 500  7675 500 
+Wire Wire Line
+	2525 5200 1900 5200
+Wire Wire Line
+	2525 5300 1900 5300
+Wire Wire Line
+	2525 5100 2125 5100
+Text Label 2225 5100 0    50   ~ 0
++3.3V
+$EndSCHEMATC
